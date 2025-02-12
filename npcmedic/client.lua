@@ -68,18 +68,3 @@ function Startprogbar()
 
     healplayer()
 end
-
-CreateThread(function()
-    while true do
-        local playerPed = PlayerPedId()
-        local isOnBike = IsPedOnAnyBike(playerPed)
-
-        if isOnBike then
-            DisableControlAction(0, 345, true)
-        end
-        
-        Wait(0)
-    end
-end)
-
-
